@@ -45,7 +45,7 @@ public class ChuongTrinh {
 	            ResultSet rs = stmt.executeQuery("SELECT MaSinhVien, HoTen FROM SinhVien");
 	            
 	            while (rs.next()) {
-	                lstSV.add(new SinhVien(rs.getString("MaSinhVien"), rs.getString("HoTen")));
+	                lstSV.add(new SinhVien(rs.getString("MaSinhVien"), rs.getString("HoTen"), rs.getInt("maNhandaotao")));
 	            }
 	            rs.close();
 	            stmt.close();
@@ -115,5 +115,7 @@ public class ChuongTrinh {
         // Thêm một sinh viên mới
         SinhVien svMoi = new SinhVien("SV011", "Trần Văn K","?");
         repo.boSungSinhVien(svMoi);
+        
+        // Tao sua o day
     }
 }
