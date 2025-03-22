@@ -119,5 +119,9 @@ public class ChuongTrinh {
         // Tao sua o day
         
         // Tao sua tiep
+        
+        // sua sinh vien
+        
+        // xoa sinh vien
     }
 }
